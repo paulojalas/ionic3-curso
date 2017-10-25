@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
 
 /**
- * Generated class for the FeedPage page.
+ * Generated class for the IntoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,24 +11,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-feed',
-  templateUrl: 'feed.html',
+  selector: 'page-into',
+  templateUrl: 'into.html',
 })
-export class FeedPage {
-
-  public nome:string = "Paulo Ricardo Martins";
-
-  public somaDoisNumeros (num1:number, num2:number):void {
-      alert(num1 + num2);
-  }
+export class IntoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-
+    console.log('ionViewDidLoad IntoPage');
   }
 
+  goToTabsPage() {
+    this.navCtrl.push(TabsPage);
+  }
 
 
 }
